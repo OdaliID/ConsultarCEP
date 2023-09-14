@@ -5,3 +5,18 @@ GET https://brasilapi.com.br/api/cep/v1/{cep}
 
 Retorno:
 { "cep": "89010025", "state": "...", "city": "...", "neighborhood": "...", "street": "..." }
+
+Implementação adicional em progresso: ação de erro sobre cep não localizado ou incompleto
+
+fetch(url, options)
+    .then((resposta) => {
+      if (!resposta.ok) {
+        setDados(null);
+        setErro("CEP não localizado.");
+        throw new Error("CEP não localizado.");
+      } else {
+        return resposta.json();
+      }
+    })
+
+
