@@ -49,7 +49,6 @@ fetch(url, options)
     }
   })
 
-Equipe de Desenvolvimento
 
-Seu Nome
-Seu GitHub
+Odali Araújo
+https://github.com/OdaliID
