@@ -5,14 +5,14 @@
 
 body {
   width: 100%;
-  background-color: #ffffff;
+  background-color: #707070;
   color: black;
   min-width: 300px;
 }
 
 .container {
   width: 80%;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(70, 70, 70);
   margin: 15px auto;
   padding: 16px;
 }
@@ -101,12 +101,24 @@ input[type="text"] {
 }
 
 .footer-logo {
-  height: 15vmin;
+  height: 6vmin;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .footer-logo {
-    animation: footer-logo-spin infinite 80s linear;
+    animation: footer-logo-spin infinite 10s linear;
   }
+}
+
+@font-face {
+  font-family: 'BeautyDemo';
+  src: url('./font/BeautyDemo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.assinatura {
+  font-family: 'BeautyDemo', sans-serif;
+  font-size: 28px;
+  color: #333;
 }
