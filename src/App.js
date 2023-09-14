@@ -23,30 +23,28 @@ function App() {
     setErro("");
 
     fetch(url, options)
-      .then((resposta) => {
-        if (!resposta.ok) {
-          setDados(null);
-          setErro("CEP não localizado.");
-          return null;
-        } else {
-          return resposta.json();
-        }
-      })
-      .then((dados) => {
-        if (dados) {
-          setDados(dados);
-          console.log(dados)
-        }
-      })
-      .catch((err) => {
-        setErro(err.message);
-      });
-  };
+    .then((resposta) => {
+      if (!resposta.ok) {
+        setDados(null);
+        setErro("CEP não localizado.");
+        throw new Error("CEP não localizado.");
+      } else {
+        return resposta.json();
+      }
+    })
+    .then((dados) => {
+      setDados(dados);
+      console.log(dados);
+    })
+    .catch((err) => {
+      setErro(err.message);
+    });
+};
 
   return (
     <div className="container">
       <div className="card">
-        <h1 style={{ padding: "6px 0px", margin: "0px" }}>Consulta CEP</h1>
+        <h1 style={{ padding: "6px 0px", margin: "0px" }}>Consulta CEP 🔎</h1>
 
         <form>
           <div className="form-group">
@@ -122,7 +120,7 @@ function App() {
         <footer className="footer">
             <div>AP1 DEV WEB &copy; 2023 - Todos os direitos reservados.</div>
             <div>Desenvolvido com react <img src={logo} className="footer-logo" alt="logo" /></div>
-
+            <div className="assinatura">Odali Araujo</div>
           </footer>
         {erro && (
           <>
