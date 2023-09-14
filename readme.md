@@ -7,7 +7,7 @@ Este é um projeto desenvolvido com ReactJS que permite preencher automaticament
 **Passo 1:** Clone ou baixe este repositório para o seu computador.
 
 ```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+git clone https://github.com/OdaliID/ConsultarCEP.git
 
 Passo 2: Abra o terminal (CMD) dentro da pasta do projeto no Visual Studio Code.
 
