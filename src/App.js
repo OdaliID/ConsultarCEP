@@ -121,14 +121,7 @@ function App() {
             <div>AP1 DEV WEB &copy; 2023 - Todos os direitos reservados.</div>
             <div>Desenvolvido com react <img src={logo} className="footer-logo" alt="logo" /></div>
             <div className="assinatura">Odali Araujo</div>
-          </footer>
-        {erro && (
-          <>
-            <br />
-            <span style={{ color: "#FF0000", fontWeight: "bold" }}>{erro}</span>
-            <br />
-          </>
-        )}
+        </footer>       
       </div>
     </div>
   );
